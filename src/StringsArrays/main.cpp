@@ -46,6 +46,9 @@ void two_pointers(std::unique_ptr<CArrayAndStrings>& arr_str_tp)
         std::cout << e << ", ";
     }
     std::cout << "]" << std::endl;
+    //    
+    std::cout << "7. Longest Palindrome Substring: ";    
+    std::cout << arr_str_tp->longestPalindromeSubstring("babad");
 }
 
 void sliding_window(std::unique_ptr<CArrayAndStrings>& arr_strs_sw)
@@ -73,6 +76,10 @@ void sliding_window(std::unique_ptr<CArrayAndStrings>& arr_strs_sw)
     std::cout << "6. Longest Ones: ";
     std::vector<int> nums7 = { 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0 };
     std::cout << arr_strs_sw->longestOnes(nums7, 2) << std::endl;
+    //
+    std::cout << "7. Max Vowels: ";
+    std::string str3 = "leetcode";
+    std::cout << arr_strs_sw->maxVowels(str3, 3);    
 }
 
 void prefix_sum(std::unique_ptr<CArrayAndStrings>& ps)

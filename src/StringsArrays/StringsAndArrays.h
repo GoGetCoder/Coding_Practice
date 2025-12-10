@@ -13,6 +13,9 @@ public:
     virtual bool isSubsequence(std::string s, std::string t) { return false; }
     virtual void reverseString(std::vector<char>& s) { }
     virtual std::vector<int> sortedSquares(std::vector<int>& nums) { return {}; }
+    virtual std::string longestPalindromeSubstring(std::string s) { return {}; }
+    virtual std::string reverseWords(std::string s) { return ""; }
+    virtual std::string reverseOnlyLetters(std::string s) { return ""; }
     // sliding window
     virtual int findLenOfLongestSum(std::vector<int>& nums, int k) { return 0; };
     virtual int longestOnes(std::string s) { return 0; }
@@ -20,6 +23,7 @@ public:
     virtual int sumOfLargestSubarrayWithLenK(std::vector<int>& nums, int k) { return 0; }
     virtual double findMaxAverage(std::vector<int>& nums, int k) { return 0.0; }
     virtual int longestOnes(std::vector<int>& nums, int k) { return 0; }
+    virtual int maxVowels(std::string s, int k) { return 0; }
     // prefix sum
     virtual std::vector<bool> answerQueries(std::vector<int>& nums, std::vector<std::vector<int>>& queries, int limit) { return {}; }
     virtual int wayToSplitArray(std::vector<int>& nums) { return 0; }

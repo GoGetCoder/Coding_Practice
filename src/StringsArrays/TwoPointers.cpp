@@ -137,3 +137,85 @@ std::vector<int> CTwoPointers::sortedSquares(std::vector<int>& nums)
 
     return result;
 }
+
+std::string CTwoPointers::reverseWords(std::string s) 
+{
+    int i, j, m, n;
+    for(i=0, j=0; j<s.size(); j++)
+    {
+        if(s[j] == ' ')
+        {
+            n = j-1;
+            m = i;
+            while(m < n)
+            {
+                char temp = s[m];
+                s[m] = s[n];
+                s[n] = temp;
+                m++; n--;
+            }
+            i = j+1;
+        }            
+    }
+    n = j-1;
+    m = i;
+    while(m < n)
+    {
+        char temp = s[m];
+        s[m] = s[n];
+        s[n] = temp;
+        m++; n--;
+    }
+
+    return s;       
+}
+
+std::string expand(std::string& s, int l, int r)
+{
+    while(l >= 0 && r < s.size() && s[l]==s[r])
+    {
+        l--; r++;
+    }
+    int start_index = l + 1;
+    int len = r - l - 1;
+    std::string result = s.substr(start_index, len);
+    return result;
+}
+
+std::string CTwoPointers::reverseOnlyLetters(std::string s)
+{
+   int i=0, j = s.size()-1;
+
+   while(i < j)
+   {
+        if(std::isalpha(s[i]) && std::isalpha(s[j]))
+        {
+            char temp = s[i];
+            s[i] = s[j];
+            s[j] = temp;
+            j--; i++;
+        }
+        else if(!std::isalpha(s[i]))
+            i++;
+        else
+            j--;            
+    }
+
+    return s; 
+}
+
+std::string CTwoPointers::longestPalindromeSubstring(std::string s)
+{
+    std::string result = "";
+
+    for(int i=0; i<s.size(); i++)
+    {
+        std::string sub1 = expand(s, i, i);
+        if(sub1.size() > result.size())
+            result = sub1;
+        std::string sub2 = expand(s, i, i+1);
+        if(sub2.size() > result.size())
+            result = sub2;
+    }
+    return result;
+}

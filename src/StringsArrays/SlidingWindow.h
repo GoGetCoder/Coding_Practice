@@ -17,7 +17,7 @@ public:
 
     /* 3. Given an array of positive integers nums and an integer k, return the number of subarrays where the product of 
           all the elements in the subarray is strictly less than k.
-          For example, given the input nums = [10, 5, 2, 6], k = 100, the answer is 8. The subarrays with products less than k are:
+          For example, given the input nums i = [10, 5, 2, 6], k = 100, the answer is 8. The subarrays with products less than k are:
           [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6] */
     int numSubarrayProductLessThanK(std::vector<int>& nums, int k) override;
 
@@ -37,6 +37,13 @@ public:
           Output: 6
           Explanation: [1,1,1,0,0,<1,1,1,1,1,1>] */
     int longestOnes(std::vector<int>& nums, int k) override;
+
+    /* 7. Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+          Example: Input: s = "abciiidef", k = 3
+                   Output: 3
+                   Explanation: The substring "iii" contains 3 vowel letters.
+    */
+    int maxVowels(std::string s, int k) override;
 
     int numSubarraySumIsK(std::vector<int>& nums, int k) override;
 }; 

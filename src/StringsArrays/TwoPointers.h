@@ -35,4 +35,24 @@ public:
           Explanation: After squaring, the array becomes [16,1,0,9,100].
           After sorting, it becomes [0,1,9,16,100]. */
     std::vector<int> sortedSquares(std::vector<int>& nums) override;
+
+    /* 7. Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and 
+          initial word order.
+          Input: s = "Let's take LeetCode contest"
+          Output: "s'teL ekat edoCteeL tsetnoc" */
+    std::string reverseWords(std::string s) override;
+
+    /* 8. Given a string s, reverse the string according to the following rules:
+          All the characters that are not English letters remain in the same position.
+          All the English letters (lowercase or uppercase) should be reversed.
+          Return s after reversing it.
+          Example: Input: s = "ab-cd"
+                   Output: "dc-ba" */
+    std::string reverseOnlyLetters(std::string s) override;
+
+    /* 9. Given a string s, return the longest palindromic substring in s.
+          Example: Input: s = "babad"
+                   Output: "bab"
+          Explanation: "aba" is also a valid answer. */
+    std::string longestPalindromeSubstring(std::string s) override;
 };

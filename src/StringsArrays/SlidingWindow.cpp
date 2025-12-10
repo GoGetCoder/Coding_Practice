@@ -142,3 +142,34 @@ int CSlidingWindow::longestOnes(std::vector<int>& nums, int k)
     }
     return ans;
 }
+
+int CSlidingWindow::maxVowels(std::string s, int k)
+{
+    int left = 0, right = 0, max_vowels = 0, count = 0;
+
+        for(right = 0; right < k; right++)
+        {
+            if(s[right] == 'a' || s[right] == 'e' || s[right] == 'i' || s[right] == 'o'
+               || s[right] == 'u')
+               count++;
+        }
+        max_vowels = count;
+
+        for(; right < s.size(); right++)
+        {
+            if(s[left] == 'a' || s[left] == 'e' || s[left] == 'i' || s[left] == 'o'
+               || s[left] == 'u')
+            {
+                count--;                
+            }
+            left++;
+            if(s[right] == 'a' || s[right] == 'e' || s[right] == 'i' || s[right] == 'o'
+               || s[right] == 'u')
+            {
+                count++;
+            }
+            max_vowels = std::max(max_vowels, count);
+        }
+
+        return max_vowels;
+}
