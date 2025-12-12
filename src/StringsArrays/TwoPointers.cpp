@@ -187,7 +187,7 @@ std::string CTwoPointers::reverseOnlyLetters(std::string s)
    int i=0, j = s.size()-1;
 
    while(i < j)
-   {
+   {    
         if(std::isalpha(s[i]) && std::isalpha(s[j]))
         {
             char temp = s[i];
